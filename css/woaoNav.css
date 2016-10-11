@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* 通用样式 */
+*{ -webkit-tap-highlight-color: rgba(0,0,0,0);}
+html{-webkit-text-size-adjust:none; } 
+body, div, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, iframe, input, textarea, select, label, article, aside, footer, header, menu, nav, section, time, audio, video {margin:0; padding:0;}
+article, aside, footer, header, hgroup, nav, section, audio, canvas, video {display:block;}
+body { font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, sans-serif; font-size:100%;}
+textarea {resize:none;}
+iframe, img {border:0 none;}
+ul, ol {list-style:none outside none;}
+input, select, textarea {outline:0 none;}
+.clear{ clear:both;}
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;   
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+a{ text-decoration: none;}
+/*a{ text-decoration: none; color:#333;}*/
+input,input:focus,input:active{ -webkit-appearance:none; user-select: text; border:none; list-style:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+/*自定义样式*/
+/*微信*/
+.weixinfcbox{width:100%;height:100%;background:rgba(0,0,0,0.8);position:fixed;left:0;top:0;z-index:2000; display:none;}
+.weixinfctext{position:absolute;top:20px;right:20px;}
+.weixinfctext img{width:100%;}
+/*我傲导航条*/
+.woaoNav{position: absolute;left: 0;top: 0;width: 60px;height: 100%; z-index:10;}
+
+.homeNav{position: absolute;bottom: 10px;left: 9px;z-index:1100;height:42px;width:42px;display:block; background:rgba(0,0,0,0.8) url(../images/navBtn.png) no-repeat center 10px; background-size:21px auto;border-radius: 50%;}
+.homeNav_open{background:url(../images/navicon.png) no-repeat center -105px; background-size:21px auto;}
+.navBtn_open{height:100%; background:rgba(0,0,0,.8);width:60px;/*opacity:0;*/display: none; z-index: 1001; position:relative;}
+.navBtn_open .nav_cont{position:absolute; bottom:50px;left:0;padding: 0 4px; width:52px;}
+.navBtn_open li{ margin-bottom:20px;width:52px; display:none}
+.navBtn_open li i{width:23px; height:20px;display:block;margin:0 auto 4px;}
+.navBtn_open li p{font-size:0.625em; color:#EEE; text-align:center;}
+.navBtn_open .c_con_01{background:url(../images/navicon.png) no-repeat 0px -20px;background-size:100%;}
+.navBtn_open .c_con_02{background:url(../images/navicon.png) no-repeat 4px -45px;background-size:100%;}
+.navBtn_open .c_con_03{background:url(../images/navicon.png) no-repeat 1px 2px;background-size:100%;}
+.navBtn_open .c_con_03.active{background:url(../images/navicon.png) no-repeat 0px bottom;background-size:100%;}
+.navBtn_open .c_con_04{background:url(../images/navicon.png) no-repeat 0px -70px;background-size:100%;}
+.navBtn_open .c_con_05{background:url(../images/navicon.png) no-repeat 1px -95px;background-size:100%;}
+.navBtn_open .attentionBtn{position:relative;}
+
+.navBtn_open li.homeBtn{ display:block;}
+/*登录*/
+@media screen and (min-width: 320px){
+  .login{width:230px;}
+}
+@media screen and (min-width: 370px){
+  .login{width:280px;}
+}
+.login{position: absolute;left: 68px;top: -90px;height:210px; background:rgba(0,0,0,0.8); background-size:100%; padding:6px;border-radius: 10px;display: none;}
+.login .leftIcon{position: absolute;left: -10px;top: 50%;width:10px;height:25px;margin-top:-12px;background: url(../images/leftIcon.png) no-repeat;background-size: 100% 100%;}
+.login .closeBtn{position:absolute;right:6px; top:6px;height:25px; width:25px;  background:url(../images/close2.png) no-repeat center;background-size:100% 100%;}
+.login .tips{color:#EEE; font-size:0.9em; margin-top:6px;line-height: 20px;}
+.login .change{margin: 15px 30px;color: #fff;text-align: center;}
+.login .loginBtn{background: #3fa733;color: #fff;}
+.login input{width:100%;height: 36px;font-size: 1em;padding: 10px 5px;margin-top:10px;border-radius: 5px;box-sizing:border-box;}
+/*快捷登录*/
+.fastLogin .telnum{position: relative;}
+.fastLogin .telnum .telbox{margin-right:108px;}
+.fastLogin .telnum .getyzm{font-size: 0.9em;color: #579eed;position:absolute;right:0;top:18px;width:102px;}
+/*淡入*/
+.navBtn_open{
+  -webkit-animation:fadeIn 0.7s ease-out normal forwards 1;
+  -moz-animation:fadeIn 0.7s ease-out normal forwards 1;
+  -ms-animation:fadeIn 0.7s ease-out  normal forwards 1;
+  -o-animation:fadeIn 0.7s ease-out normal forwards 1;
+  animation:fadeIn 0.7s ease-out  normal forwards 1;
+}
+@keyframes fadeIn{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+@-webkit-keyframes fadeIn{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+
+#woaoMenu .active{ display:block;}
+
